@@ -12,6 +12,7 @@ CREATE TABLE roles (
   title VARCHAR(30) UNIQUE NOT NULL,
   salary DECIMAL NOT NULL,
   department_id INTEGER NOT NULL
+  --FK?
 );
 
 CREATE TABLE employees (
