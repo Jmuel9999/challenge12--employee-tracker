@@ -13,7 +13,30 @@ questionPrompt = () => {
             type: 'list',
             message: 'Please choose from the following options:', 
             name: 'startChoice',
-            choices: ['View all departments', 'View all roles', 'View all employees', 'Add a department', 'Add a role', 'Add an employee', 'Update an employee'],
+            choices: [
+                {
+                    name: 'View all departments'
+                    value: viewAllDepartments()
+                }, 
+                {
+                    name: 'View all roles'
+                }, 
+                {
+                    name: 'View all employees'
+                }, 
+                {
+                    name: 'Add a department'
+                }, 
+                {
+                    name: 'Add a role'
+                }, 
+                {
+                    name: 'Add an employee'
+                }, 
+                {
+                    name: 'Update an employee'
+                }
+            ],
             
             validate: startChoice => {
                 if (startChoice) {
@@ -24,6 +47,20 @@ questionPrompt = () => {
             }
         }
     ])
+    .then(res => {
+            let selected = res.selected;
+            switch (selected) {
+                case 'VIEW_ALL_DEPARTMENTS':
+
+            }
+        }
+    )  
+}
+
+
+// functions for slected choices from starting prompt
+const viewAllDepartments = function () {
+
 }
 
 questionPrompt();
